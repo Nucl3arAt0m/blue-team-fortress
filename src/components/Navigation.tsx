@@ -13,10 +13,21 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  // const scrollToSection = (href: string) => {
+  //   const element = document.querySelector(href);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   setIsOpen(false);
+  // };
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsOpen(false);
   };
@@ -30,7 +41,10 @@ const Navigation = () => {
             <div className="p-2 bg-gradient-to-r from-primary to-accent rounded-lg">
               <Shield className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span
+              className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent cursor-pointer"
+              onClick={() => scrollToSection("#home")}
+            >
               Sahil Borse
             </span>
           </div>

@@ -41,19 +41,21 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-cyber transition-all duration-300"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:-translate-y-1 transition-transform ease-in-out"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
               
-              <Button 
-                variant="outline"
-                className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-6 text-lg rounded-lg"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </Button>
+              <a href="https://drive.google.com/file/d/1bkQMr-QY2F3T9E54TaspO7znytynRTr1/view?usp=drive_link" download>
+  <Button 
+    variant="outline"
+    className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-6 text-lg rounded-lg transition-transform duration-300 ease-in-out hover:-translate-y-1"
+  >
+    <Download className="mr-2 h-5 w-5" />
+    Download CV
+  </Button>
+</a>
             </div>
           </div>
         </div>
