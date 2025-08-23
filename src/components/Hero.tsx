@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Download, Mail } from "lucide-react";
+import sahilPortrait from "@/assets/sahil-portrait.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -20,9 +21,9 @@ const Hero = () => {
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyber-tertiary rounded-full pulse-glow" style={{ animationDelay: "2s" }}></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="text-center max-w-4xl">
+          <div className="text-center lg:text-left">
             <div className="inline-flex items-center space-x-2 mb-6 px-4 py-2 bg-secondary/50 rounded-full border border-border">
               <Shield className="h-4 w-4 text-primary" />
               <span className="text-sm text-muted-foreground">Cybersecurity Specialist</span>
@@ -38,24 +39,40 @@ const Hero = () => {
               Defensive Cybersecurity Expert building secure digital environments and tackling real-world security challenges
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:-translate-y-1 transition-transform ease-in-out"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-cyber transition-all duration-300"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
               
-              <a href="https://drive.google.com/file/d/1bkQMr-QY2F3T9E54TaspO7znytynRTr1/view?usp=drive_link" download>
-  <Button 
-    variant="outline"
-    className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-6 text-lg rounded-lg transition-transform duration-300 ease-in-out hover:-translate-y-1"
-  >
-    <Download className="mr-2 h-5 w-5" />
-    Download CV
-  </Button>
-</a>
+              <Button 
+                variant="outline"
+                className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-6 text-lg rounded-lg"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </Button>
+            </div>
+          </div>
+
+          {/* Profile Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 animate-pulse"></div>
+              <div className="relative w-80 h-80 rounded-full border-4 border-gradient-to-r from-primary to-accent overflow-hidden shadow-2xl float-animation">
+                <img
+                  src={sahilPortrait}
+                  alt="Sahil Sachin Borse - Cybersecurity Specialist"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Cyber accent elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 border-2 border-primary rounded-lg rotate-45 animate-spin"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-accent rounded-full pulse-glow"></div>
             </div>
           </div>
         </div>
