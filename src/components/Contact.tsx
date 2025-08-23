@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, Github, Send, MapPin, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,38 +61,33 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace with your Formspree endpoint
-      const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID";
-      
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "Website Contact Form",
-          message: formData.message,
-        }),
+      // EmailJS configuration
+      const serviceID = 'service_ly6avea';
+      const templateID = 'template_hnagucg';
+      const publicKey = 'oApY90N2MU_z9RIPk';
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject || "Website Contact Form",
+        message: formData.message,
+        to_name: "Sahil",
+      };
+
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        throw new Error("Failed to send message");
-      }
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
