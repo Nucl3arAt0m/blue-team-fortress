@@ -26,7 +26,10 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div 
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => scrollToSection("#home")}
+          >
             <div className="p-2 bg-gradient-to-r from-primary to-accent rounded-lg">
               <Shield className="h-6 w-6 text-primary-foreground" />
             </div>
