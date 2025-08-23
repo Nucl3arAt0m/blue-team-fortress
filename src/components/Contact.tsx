@@ -63,7 +63,7 @@ const Contact = () => {
     try {
       // EmailJS configuration
       const serviceID = 'service_ly6avea';
-      const templateID = 'template_hnagucg';
+      const templateID = 'template_5453slr';
       const publicKey = 'oApY90N2MU_z9RIPk';
 
       const templateParams = {
