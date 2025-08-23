@@ -60,8 +60,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace with your Formspree endpoint
-      const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID";
+      // Formspree endpoint
+      const formspreeEndpoint = "https://formspree.io/f/mrblndok";
       
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
