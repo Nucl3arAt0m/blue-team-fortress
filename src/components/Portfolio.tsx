@@ -10,6 +10,7 @@ const Portfolio = () => {
       icon: Database,
       tags: ["ELK Stack", "Kibana", "Log Management", "SIEM"],
       gradient: "from-primary to-accent",
+      githubUrl: "https://github.com/Nucl3arAt0m/Sysmon-Logs-to-ELK",
     },
     {
       title: "HoneyPot SentinelOne",
@@ -17,6 +18,7 @@ const Portfolio = () => {
       icon: Shield,
       tags: ["Azure", "Microsoft Sentinel", "Honeypot", "Threat Detection"],
       gradient: "from-accent to-cyber-secondary",
+      githubUrl: "https://github.com/Nucl3arAt0m/HoneyPot-SentinelOne",
     },
     {
       title: "EDR-Attack and Defense",
@@ -24,6 +26,7 @@ const Portfolio = () => {
       icon: Activity,
       tags: ["EDR", "Sliver C2", "LimaCharlie", "Attack Simulation"],
       gradient: "from-cyber-secondary to-cyber-tertiary",
+      githubUrl: "https://github.com/Nucl3arAt0m/EDR-Attack_and_Defense",
     },
     {
       title: "CTI Dashboard",
@@ -31,6 +34,7 @@ const Portfolio = () => {
       icon: TrendingUp,
       tags: ["Python", "Flask", "MongoDB", "Threat Intelligence"],
       gradient: "from-cyber-tertiary to-primary",
+      githubUrl: "https://github.com/Nucl3arAt0m/CTI-Dashboard",
     },
   ];
 
@@ -82,23 +86,16 @@ const Portfolio = () => {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex space-x-3 pt-4">
+                {/* Action Button */}
+                <div className="pt-4">
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 border-primary/50 text-primary hover:bg-primary/10"
+                    className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-accent/50 text-accent hover:bg-accent/10"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
+                    Check out
                   </Button>
                 </div>
               </CardContent>
