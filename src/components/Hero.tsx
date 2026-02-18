@@ -61,7 +61,7 @@ const Hero = () => {
             <Button 
               variant="outline"
               className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-6 text-lg rounded-lg transition-all duration-300 hover:-translate-y-1"
-              onClick={() => window.open('https://drive.google.com/file/d/1bkQMr-QY2F3T9E54TaspO7znytynRTr1/view?usp=drive_link', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1ahhECvegTr6AKI5tjv9uEsxU8S6CvLBY/view?usp=sharing', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
               Download CV
