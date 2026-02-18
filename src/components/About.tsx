@@ -4,7 +4,7 @@ import { GraduationCap, Building, Calendar } from "lucide-react";
 const About = () => {
   const education = [
     {
-      degree: "BTech in Cybersecurity",
+      degree: "BTech CSE, Specialization in Cyber Security",
       institution: "Vellore Institute of Technology",
       year: "2025",
       icon: GraduationCap,
