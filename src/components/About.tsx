@@ -19,11 +19,17 @@ const About = () => {
 
   const experience = [
     {
+      role: "Business Analyst - MD & CEO's office",
+      company: "Allcargo Logistics",
+      period: "November 2025 - Present",
+      icon: Building,
+    },
+    {
       role: "Cybersecurity Intern",
       company: "Elevate Labs",
       period: "June - July 2025",
       icon: Building,
-    },
+    }
   ];
 
   return (
