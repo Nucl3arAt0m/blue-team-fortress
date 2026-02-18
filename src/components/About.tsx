@@ -56,7 +56,7 @@ const About = () => {
                     and developing threat detection capabilities that provide real-time insights into potential security incidents.
                   </p>
                   <p>
-                    I thrive on tackling real-world security challenges and am committed to continuous learning in this 
+                    I thrive on tackling real-world security challenges and I'm committed to continuous learning in this 
                     rapidly evolving field. My goal is to contribute to creating more secure digital environments where 
                     organizations can operate with confidence.
                   </p>
